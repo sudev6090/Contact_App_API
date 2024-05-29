@@ -32,12 +32,6 @@ class ContactProvider extends ChangeNotifier {
   }
 
   Future<void> addContacts(context, ContactModel model) async {
-    // ContactModel contactsModel = ContactModel(
-    //   name: nameController.text.trim(),
-    //   phone:int.tryParse(phoneController.text.trim()),
-    //   address:addressController.text.trim(),
-    //   email:emailController.text.trim(),
-    // );
     try {
       final Response = await dio.post(
         'https://contacts-management-server.onrender.com/api/contacts',
